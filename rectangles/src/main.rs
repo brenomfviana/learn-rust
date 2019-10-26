@@ -21,4 +21,21 @@ fn main() {
   println!("The area of the rectangle is {} square pixels.",
     rect::area_v3(&rect1));
   println!("rect1 is {:#?}", rect1);
+
+  // By using struct and methods
+  let rect1 = rect::Rectangle{ width: width1 as u32, height: height1 as u32 };
+  println!("The area of the rectangle is {} square pixels.", rect1.area());
+  println!("rect1 is {:#?}", rect1);
+
+  // Another method
+  let rect1 = rect::Rectangle{ width: 30, height: 50 };
+  let rect2 = rect::Rectangle{ width: 10, height: 40 };
+  let rect3 = rect::Rectangle{ width: 60, height: 45 };
+
+  println!("Can rect1 hold rect2? {}.", rect1.can_hold(&rect2));
+  println!("Can rect1 hold rect3? {}.", rect1.can_hold(&rect3));
+
+  // Using an associated function for create a square
+  let sq = rect::Rectangle::square(3);
+  println!("The area of the square is {} square pixels.", sq.area());
 }
