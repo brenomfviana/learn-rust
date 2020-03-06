@@ -16,13 +16,23 @@
 - Assignment: can copy, move or borrow.
   - Move: pointer;
   - Borrowing: variable by reference. Mutable variables freezes and can be mutable or immutable borrowing.
+To remember
 
-
-## OOP Features
+### OOP Features
 - `struct`: class;
   - To implement methods use: `impl <struct-name> { <functions>; }`
 - Inheritance/Polymorphism: `traits`;
   - Defines functions which can be implemented by structs.
+
+
+## To learn more
+- Generics bounds;
+  - `where`;
+  - Associated types.
+- `Ord` and operators traits;
+- Macro system;
+- Pipes.
+
 
 ## Interesting features
 - Destructures let the code cleaner and powerful (and they can be used in a lot of ways: `struct`, `match`, `ref` etc.);
@@ -52,15 +62,6 @@
 ### Interesting traits
 - From: `6-Conversion/0-from-and-into.rs`;
 - Iterator.
-
-
-## Still learning about
-- Generics bounds;
-  - `where`;
-  - Associated types.
-- `Ord` and operators traits;
-- Macro system;
-- Pipes.
 
 
 ## Printing
