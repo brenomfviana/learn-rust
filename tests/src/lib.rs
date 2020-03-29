@@ -21,7 +21,8 @@ pub fn add_two(a: i32) -> i32 {
 //
 
 pub fn greeting(name: &str) -> String {
-  format!("Hello!")
+  // format!("Hello!") // It does not works
+  format!("{}", name)
 }
 
 //
@@ -113,12 +114,12 @@ mod tests {
     }
   }
 
-  #[test]
-  fn it_doesnt_works() -> Result<(), String> {
-    if 2 - 2 == 4 {
-      Ok(())
-    } else {
-      Err(String::from("two plus two does not equal four"))
-    }
-  }
+  // #[test]
+  // fn it_doesnt_works() -> Result<(), String> {
+  //   if 2 - 2 == 4 {
+  //     Ok(())
+  //   } else {
+  //     Err(String::from("two minus two does not equal four"))
+  //   }
+  // }
 }
