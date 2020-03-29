@@ -16,7 +16,7 @@
 - Assignment: can copy, move or borrow.
   - Move: pointer;
   - Borrowing: variable by reference. Mutable variables freezes and can be mutable or immutable borrowing.
-To remember
+
 
 ### OOP Features
 - `struct`: class;
