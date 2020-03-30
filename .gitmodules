@@ -1,3 +1,6 @@
 [submodule "rust-by-example"]
 	path = rust-by-example
 	url = https://github.com/brenov/rust-by-example
+[submodule "minigrep"]
+	path = minigrep
+	url = https://github.com/brenov/minigrep
