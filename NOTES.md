@@ -1,17 +1,24 @@
 # Notes
 
 ## To remember
-- `_` is used before variables, functions and methods to silence the compiler or to ignore a component in a destructure;
+- `_` is used before variables, functions and methods to silence the compiler or to ignore a component in a destructure or match;
 - Casting: `let integer = decimal as u8;`;
 - Tuple assignment: `let (integer, boolean) = (1, true);`;
 - Initialize array with the same values: `let ys: [i32; 500] = [0; 500];`;
 - Define a mutable variable: `let mut mutable_binding = 1;`;
+- Closures can use type annotations: `|num: u32| -> u32 {...}`;
+  - ```
+    fn  add_one_v1   (x: u32) -> u32 { x + 1 }
+    let add_one_v2 = |x: u32| -> u32 { x + 1 };
+    let add_one_v3 = |x|             { x + 1 };
+    let add_one_v4 = |x|               x + 1  ;
+    ```
 - Aliasing: `type NanoSecond = u64;`;
 - Labels for command loop: `'outer: loop {...`. To break: `break 'outer;`;
-- Set a value from a loop directly: `let result = loop {...`;
-- For: `for n in 1..101 {`;
+- Set a value from a loop directly: `let result = loop {...}`;
+- For: `for n in 1..101 {...}`;
 - `match` is like C `switch`, but better;
-  - We can define a range: `match {... n @ 1 ..= 12 => ...`;
+  - We can define a range: `match {... n @ 1 ..= 12 => ...}`;
 - Diverging functions: functions with no return;
 - Assignment: can copy, move or borrow.
   - Move: pointer;
