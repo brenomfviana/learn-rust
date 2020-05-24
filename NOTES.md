@@ -1,10 +1,10 @@
 # Notes
 
 ## To remember
-- `_` is used before variables, functions and methods to silence the compiler or to ignore a component in a destructure or match;
-- Casting: `let integer = decimal as u8;`;
+- `_` is used before variables, functions and methods to silence the compiler, to ignore a component in a destructure or as a else-like in a match;
+- Casting (`as`): `let integer = decimal as u8;`;
 - Tuple assignment: `let (integer, boolean) = (1, true);`;
-- Initialize array with the same values: `let ys: [i32; 500] = [0; 500];`;
+- Initialize array with the same values: `let y: [i32; 500] = [0; 500];`;
 - Define a mutable variable: `let mut mutable_binding = 1;`;
 - Closures can use type annotations: `|num: u32| -> u32 {...}`;
   - ```
@@ -18,27 +18,18 @@
 - Set a value from a loop directly: `let result = loop {...}`;
 - For: `for n in 1..101 {...}`;
 - `match` is like C `switch`, but better;
-  - We can define a range: `match {... n @ 1 ..= 12 => ...}`;
+  - We can define a range: `match x {1 ..= 12 => ...}`;
+  - We can use an `if`: `match x {Some(x) if x < 5 => ...}`;
+  - We can or operator `|`: `match x {5 | 6 if external_variable => ...}`;
+  - We can bind a new variable with `@`: `match x {... n @ 1 ..= 12 => ...}`;
 - Diverging functions: functions with no return;
+- Functional Features example: `let v2: Vec<_> = v1.iter().map(|x| x + 1).collect();`;
 - Assignment: can copy, move or borrow.
   - Move: pointer;
-  - Borrowing: variable by reference. Mutable variables freezes and can be mutable or immutable borrowing.
-
-
-### OOP Features
-- `struct`: class;
-  - To implement methods use: `impl <struct-name> { <functions>; }`
-- Inheritance/Polymorphism: `traits`;
-  - Defines functions which can be implemented by structs.
-
-
-## To learn more
-- Generics bounds;
-  - `where`;
-  - Associated types.
-- `Ord` and operators traits;
-- Macro system;
-- Pipes.
+  - Borrowing: variable by reference. Mutable variables freezes and can be mutable or immutable borrowing;
+- Smart pointers: `Box`, `Rc`, `RcCell`:
+  - `Rc<T>`: allows multiple borrowing;
+- Function pointer `fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32`.
 
 
 ## Interesting features
@@ -62,8 +53,25 @@
 - Raw strings `r"string"`;
 - Binary strings `b"string"`;
 - Quote a string with `#"quoted string"#`;
-- RC;
+- Rc;
 - Raw identifiers.
+
+
+## Improve skills of:
+- Generics bounds;
+- `where`;
+- Associated types.
+- `Ord` and operators traits;
+- Macro system;
+- Pipes;
+- Smart pointers.
+
+
+### OOP Features
+- `struct`: class;
+  - To implement methods use: `impl <struct-name> { <functions>; }`
+- Inheritance/Polymorphism: `traits`;
+  - Defines functions which can be implemented by structs.
 
 
 ### Interesting traits
