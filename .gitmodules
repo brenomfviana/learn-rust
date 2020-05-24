@@ -4,3 +4,6 @@
 [submodule "minigrep"]
 	path = minigrep
 	url = https://github.com/brenov/minigrep
+[submodule "rust-web-server"]
+	path = rust-web-server
+	url = https://github.com/brenov/rust-web-server
